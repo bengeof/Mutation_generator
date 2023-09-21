@@ -12,7 +12,7 @@ while main < 100000:
         import numpy as np
 
 
-        df = pd.read_csv('1st_level_weights_for_walker.csv')
+        df = pd.read_csv('Walker_weights_1.csv')
 
         weighted_sample = df.sample(n=1, weights="Frequency")
         #print(weighted_sample)
@@ -20,7 +20,7 @@ while main < 100000:
         res1 = weighted_sample['Residue'].tolist()
 
 
-        df = pd.read_csv('2st_level_weights_for_walker.csv')
+        df = pd.read_csv('Walker_weights_1.csv')
 
         weighted_sample = df.sample(n=100, weights="Frequency", random_state=np.random.RandomState())
         #weighted_sample = weighted_sample.sort_values('Frequency', ascending=False)
@@ -69,7 +69,7 @@ while main < 100000:
         import pandas as pd
 
 
-        df = pd.read_csv('3rd_level_weights_for_walker.csv')
+        df = pd.read_csv('Walker_weights_2.csv')
 
         weighted_sample = df.sample(n=30, weights="Frequency", random_state=np.random.RandomState())
 
